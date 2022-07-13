@@ -1,0 +1,22 @@
+<div fxLayout="column" fxLayoutFill>
+  <div>
+    <mat-toolbar>
+      <span>ENFOLL</span>
+      <span class="spacer"></span>
+      <button mat-button>Services</button>
+      <button mat-button [matMenuTriggerFor]="menu">Contribute</button>
+      <button mat-button>Sign In</button>
+    </mat-toolbar>
+  </div>
+  <div fxFlex fxLayout="row" fxLayoutAlgin="start center">
+    <div class="page">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Invest / Donate</button>
+  <button mat-menu-item>Donate / Sell Solar Panels</button>
+  <button mat-menu-item>Buy Solar Panels</button>
+</mat-menu>
