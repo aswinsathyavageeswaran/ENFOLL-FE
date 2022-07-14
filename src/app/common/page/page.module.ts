@@ -5,6 +5,7 @@ import { PageComponent } from "./page.component";
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MatMenuModule } from '@angular/material/menu';
     FlexLayoutModule,
     MatToolbarModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterModule
   ],
   exports: [
     PageComponent
