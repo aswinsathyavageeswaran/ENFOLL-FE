@@ -1,23 +1,17 @@
 import { NgModule } from "@angular/core";
-import { DonationFormComponent } from "./donation-form/donation-form.component";
-import { DonationListComponent } from "./donation-list/donation-list.component";
-import { MatTableModule } from '@angular/material/table';
-import { MatButtonModule } from "@angular/material/button";
-import { MatIconModule } from '@angular/material/icon';
+import { DonationFormModule } from "./donation-form/donation-form.module";
+import { DonationListModule } from "./donation-list/donation-list.module";
 
 @NgModule({
   declarations: [
-    DonationListComponent,
-    DonationFormComponent
   ],
   imports: [
-    MatTableModule,
-    MatButtonModule,
-    MatIconModule
+    DonationListModule,
+    DonationFormModule
   ],
   exports: [
-    DonationListComponent,
-    DonationFormComponent
+    DonationListModule,
+    DonationFormModule
   ]
 })
 export class DonationModule { }
