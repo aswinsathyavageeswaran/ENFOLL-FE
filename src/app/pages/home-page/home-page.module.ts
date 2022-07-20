@@ -1,7 +1,11 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-import { HomePageRoutingModule } from "./home-page-routing.module";
+import { RouterModule, Routes } from "@angular/router";
 import { HomePageComponent } from "./home-page.component";
+
+const routes: Routes = [
+  { path: '', component: HomePageComponent },
+];
 
 @NgModule({
   declarations: [
@@ -9,8 +13,10 @@ import { HomePageComponent } from "./home-page.component";
   ],
   imports: [
     CommonModule,
-    HomePageRoutingModule
+    RouterModule.forChild(routes),
   ],
-  exports: []
+  exports: [
+    RouterModule
+  ]
 })
 export class HomePageModule { }

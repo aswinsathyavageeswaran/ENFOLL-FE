@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 
-export interface IDonations {
+export interface IDonation {
   amount: string;
   date: string;
 }
 
-const ELEMENT_DATA: IDonations[] = [
+const ELEMENT_DATA: IDonation[] = [
   { amount: "$100", date: "12/12/2019" },
   { amount: "$200", date: "12/12/2020" },
   { amount: "$300", date: "12/12/2021" },
