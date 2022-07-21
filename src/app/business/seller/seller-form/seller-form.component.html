@@ -1,1 +1,52 @@
-<p>seller-form works!</p>
+<form fxLyout="column">
+  <mat-form-field appearance="outline">
+    <mat-label># Panels</mat-label>
+    <input matInput required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Type of Panels</mat-label>
+    <mat-select required>
+      <mat-option>Polycrystalline </mat-option>
+      <mat-option>Monocrystalline </mat-option>
+      <mat-option>Thin-film </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Efficiency as certified by Agency</mat-label>
+    <input matInput required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Assessing Agency</mat-label>
+    <textarea matInput required></textarea>
+  </mat-form-field>
+
+  <div fxLayout="row" fxLayoutGap="1em">
+    <label for="">Donate</label>
+    <mat-radio-group fxLayout="row" fxLayoutGap="1em">
+      <mat-radio-button value="1">Yes</mat-radio-button>
+      <mat-radio-button value="2">No</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <br />
+
+  <mat-form-field appearance="outline">
+    <mat-label>Price per Panel</mat-label>
+    <input matInput required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Address</mat-label>
+    <textarea matInput required></textarea>
+  </mat-form-field>
+
+  <br />
+
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <a mat-stroked-button routerLink="/home">Cancel</a>
+    <button type="button" mat-raised-button color="primary">Pay</button>
+  </div>
+</form>
