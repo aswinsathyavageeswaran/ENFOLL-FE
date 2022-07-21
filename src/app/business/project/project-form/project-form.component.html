@@ -1,0 +1,61 @@
+<form fxLyout="column">
+  <mat-form-field appearance="outline">
+    <mat-label>Project Name</mat-label>
+    <input matInput required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Energy Requirement</mat-label>
+    <input matInput required />
+    <span matSuffix>KW</span>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Non-shaded area available</mat-label>
+    <input matInput required />
+    <span matSuffix>Sq Ft.</span>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Status</mat-label>
+    <input matInput disabled value="New" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Project Cost</mat-label>
+    <input matInput disabled />
+  </mat-form-field>
+
+  <div fxLayoutAlign="end center">
+    <button mat-flat-button color="accent" disabled>
+      View project cost breakdown
+    </button>
+  </div>
+
+  <br />
+
+  <label for="">Document CheckList</label>
+  <br />
+  <br />
+  <div fxLayout="column" fxLayoutGap="1em">
+    <div fxLayoutAlign="space-between center">
+      <mat-checkbox>Collateral Document</mat-checkbox>
+      <button type="button" mat-flat-button color="accent">Browse</button>
+    </div>
+    <div fxLayoutAlign="space-between center">
+      <mat-checkbox>ID Proof</mat-checkbox>
+      <button type="button" mat-flat-button color="accent">Browse</button>
+    </div>
+  </div>
+  <br />
+
+  <br />
+
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <a mat-stroked-button routerLink="/home">Cancel</a>
+    <div fxLayoutGap="1em">
+      <button type="button" mat-raised-button color="primary">Save</button>
+      <button type="button" mat-raised-button color="accent">Continue</button>
+    </div>
+  </div>
+</form>
