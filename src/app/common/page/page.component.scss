@@ -2,17 +2,31 @@
   flex: 1 1 auto;
 }
 
+.container {
+  height: 100%;
+}
+
 .toolbar,
 .page {
   width: 100%;
   max-width: 1200px;
 }
 
+.toolbar {
+  .logo {
+    height: 100%;
+    background-color: rgb(58, 0, 136);
+    max-width: 200px;
+    img {
+      transform: scale(0.3);
+    }
+  }
+}
+
 .page {
   margin: 2em 0;
   padding: 0 2em;
 }
-
 .mat-toolbar-row,
 .mat-toolbar-single-row {
   padding: 0 2em;
