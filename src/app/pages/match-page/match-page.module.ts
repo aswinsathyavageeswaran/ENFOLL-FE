@@ -1,32 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BuyPageComponent } from './buy-page.component';
+import { MatchPageComponent } from './match-page.component';
 import { RouterModule, Routes } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatCardModule } from '@angular/material/card';
-import { ProjectListModule } from '@business/project/project-list/project-list.module';
-import { ProjectFormModule } from '@business/project/project-form/project-form.module';
+import { ProjectCardModule } from '@business/project/project-card/project-card.module';
+import { MatchResultModule } from '@business/match/match-result/match-result.module';
 import { StepProgressModule } from '@shared/step-progress/step-progress.module';
 
 const routes: Routes = [
-  { path: '', component: BuyPageComponent }
-]
+  { path: '', component: MatchPageComponent }
+];
 
 @NgModule({
   declarations: [
-    BuyPageComponent
+    MatchPageComponent,
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     FlexLayoutModule,
-    MatCardModule,
-    ProjectListModule,
-    ProjectFormModule,
+    MatButtonModule,
+    ProjectCardModule,
+    MatchResultModule,
     StepProgressModule
   ],
   exports: [
     RouterModule
   ]
 })
-export class BuyPageModule { }
+export class MatchPageModule { }

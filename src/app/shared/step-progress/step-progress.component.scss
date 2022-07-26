@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  .step {
+    min-height: 1em;
+    &:nth-last-child(1) {
+      background-color: #548235;
+    }
+    &:nth-last-child(2) {
+      background-color: #a9d08e;
+    }
+    &:nth-last-child(3) {
+      background-color: #c6e0b4;
+    }
+    &:nth-last-child(4) {
+      background-color: #e2efda;
+    }
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+}

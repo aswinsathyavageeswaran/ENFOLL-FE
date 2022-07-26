@@ -1,7 +1,9 @@
+<app-step-progress [step]="1"></app-step-progress>
+<br />
 <h2>Project Details</h2>
 <mat-card fxLayoutAlign="center" class="mat-elevation-z8">
   <div class="form">
-    <app-project-form></app-project-form>
+    <app-project-form (continue)="onContinue()"></app-project-form>
   </div>
 </mat-card>
 <br />

@@ -1,0 +1,19 @@
+<app-step-progress [step]="2"></app-step-progress>
+<br />
+<h2>Buyer Seller Matching</h2>
+<app-project-card></app-project-card>
+<br />
+<br />
+<h3>Best Match</h3>
+<app-match-result></app-match-result>
+<br />
+<br />
+<div fxLayoutAlign="space-between center">
+  <button mat-stroked-button (click)="onCancel()">cancel</button>
+  <div fxLayoutGap="1em">
+    <button mat-raised-button color="accent">Find the Next Best Option</button>
+    <button mat-raised-button color="primary" (click)="onChoose()">
+      Choose this Option
+    </button>
+  </div>
+</div>

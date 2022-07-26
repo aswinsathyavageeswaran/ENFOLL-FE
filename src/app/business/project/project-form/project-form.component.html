@@ -55,7 +55,14 @@
     <a mat-stroked-button routerLink="/home">Cancel</a>
     <div fxLayoutGap="1em">
       <button type="button" mat-raised-button color="primary">Save</button>
-      <button type="button" mat-raised-button color="accent">Continue</button>
+      <button
+        type="button"
+        mat-raised-button
+        color="accent"
+        (click)="onContinue()"
+      >
+        Continue
+      </button>
     </div>
   </div>
 </form>
