@@ -5,6 +5,7 @@ import { DonatePageComponent } from "./donate-page.component";
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { RouterModule, Routes } from "@angular/router";
+import { NgoLocationService } from "@api/services/ngo-location.service";
 
 const routes: Routes = [
   { path: '', component: DonatePageComponent },
@@ -23,6 +24,9 @@ const routes: Routes = [
   ],
   exports: [
     RouterModule
+  ],
+  providers: [
+    NgoLocationService
   ]
 })
 export class DonatePageModule { }

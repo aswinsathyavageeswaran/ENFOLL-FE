@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "playground-c81ef"
+  },
+  "targets": {
+    "playground-c81ef": {
+      "hosting": {
+        "enfoll": [
+          "playground-c81ef"
+        ]
+      }
+    }
   }
 }

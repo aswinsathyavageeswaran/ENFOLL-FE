@@ -4,6 +4,7 @@ import { EstimatePageComponent } from './estimate-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProjectCardModule } from '@business/project/project-card/project-card.module';
 import { StepProgressModule } from '@shared/step-progress/step-progress.module';
+import { EstimateFormModule } from '@business/estimate/estimate-form/estimate-form.module';
 
 const routes: Routes = [
   { path: '', component: EstimatePageComponent }
@@ -17,7 +18,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     ProjectCardModule,
-    StepProgressModule
+    StepProgressModule,
+    EstimateFormModule
   ],
   exports: [
     RouterModule

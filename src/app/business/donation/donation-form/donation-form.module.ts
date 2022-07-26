@@ -7,12 +7,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatRadioModule } from '@angular/material/radio';
 import { RouterModule } from "@angular/router";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
     DonationFormComponent
   ],
   imports: [
+    CommonModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
