@@ -1,16 +1,10 @@
-<ng-container *ngIf="isReady">
-  <h2>Donate</h2>
-  <mat-card fxLayoutAlign="center" class="mat-elevation-z8">
-    <div class="form" *ngIf="formConfig$">
-      <app-donation-form
-        [config$]="formConfig$"
-        [locations]="locations"
-      ></app-donation-form>
-    </div>
-  </mat-card>
-  <br />
-  <br />
-  <h2>Your Donations</h2>
-  <app-donation-list></app-donation-list>
-  <button (click)="temp()">temp</button>
-</ng-container>
+<h2>Donate</h2>
+<mat-card fxLayoutAlign="center" class="mat-elevation-z8">
+  <div class="form">
+    <app-donation-form [config$]="formConfig$"></app-donation-form>
+  </div>
+</mat-card>
+<br />
+<br />
+<h2>Your Donations</h2>
+<app-donation-list></app-donation-list>

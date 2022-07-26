@@ -8,7 +8,7 @@
     <mat-form-field appearance="outline">
       <mat-label>By Location</mat-label>
       <mat-select multiple>
-        <ng-container *ngFor="let location of locations">
+        <ng-container *ngFor="let location of config.locations">
           <mat-option [value]="location.value">{{ location.key }}</mat-option>
         </ng-container>
       </mat-select>

@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { RouterModule, Routes } from "@angular/router";
 import { NgoLocationService } from "@api/services/ngo-location.service";
+import { DonationFormModule } from "@business/donation/donation-form/donation-form.module";
 
 const routes: Routes = [
   { path: '', component: DonatePageComponent },

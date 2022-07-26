@@ -1,5 +1,5 @@
 import { KeyValue } from "@angular/common";
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnChanges, OnDestroy, OnInit, SimpleChange } from "@angular/core";
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from "@angular/core";
 import { Observable, Subject, takeUntil } from "rxjs";
 import { IDonationForm } from "./donation-form.model";
 
@@ -9,14 +9,12 @@ import { IDonationForm } from "./donation-form.model";
   styleUrls: ["./donation-form.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DonationFormComponent implements OnInit, OnDestroy, OnChanges {
+export class DonationFormComponent implements OnInit, OnDestroy {
   private unsubscribe$ = new Subject<void>();
 
   @Input() config$?: Observable<IDonationForm>;
-  @Input() locations: KeyValue<string, number>[] = [];
   config: IDonationForm = {
-    locations: [],
-    random: 0
+    locations: []
   } as IDonationForm;
 
   constructor(private ref: ChangeDetectorRef) { }
@@ -26,21 +24,12 @@ export class DonationFormComponent implements OnInit, OnDestroy, OnChanges {
       throw new Error("DonationFormComponent: config$ is required");
     }
 
-    console.log(this.config$)
-
-    this.config$.subscribe((config) => {
-      console.log('child', config);
+    this.config$.pipe(takeUntil(this.unsubscribe$)).subscribe((config) => {
       this.config = config;
       this.ref.detectChanges();
-    }).unsubscribe();
+    });
 
     this.ref.detectChanges();
-  }
-
-  ngOnChanges(changes: { [key: string]: SimpleChange }) {
-    if (changes.hasOwnProperty('config$')) {
-      console.log('config changed', this.config$)
-    }
   }
 
   ngOnDestroy(): void {
