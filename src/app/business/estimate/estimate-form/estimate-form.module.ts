@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { EstimateFormComponent } from './estimate-form.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -13,7 +15,9 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     FlexLayoutModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   exports: [
     EstimateFormComponent

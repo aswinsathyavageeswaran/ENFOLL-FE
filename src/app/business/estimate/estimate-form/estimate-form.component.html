@@ -1,4 +1,56 @@
 <form fxLayout="column">
+  <h4>Panel Sourcing</h4>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Panel Cost</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Logistics Partner</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Transportation Cost</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <h4>Installation</h4>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Installation Partner</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Installation Cost</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <h4>Inspection & Connection</h4>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Fees</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Connection Charges</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Misc Charges</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <div fxLayoutAlign="space-between">
+    <h3>Total Project Cost</h3>
+    <h3>$</h3>
+  </div>
+
+  <br />
   <div fxLayoutAlign="space-between center">
     <button mat-stroked-button type="button" (click)="onCancel()">
       Cancel
