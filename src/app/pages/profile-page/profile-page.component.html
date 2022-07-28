@@ -1,0 +1,8 @@
+<h2>Profile Details</h2>
+<mat-card fxLayoutAlign="center" class="mat-elevation-z8">
+  <div class="form">
+    <ng-container *ngIf="userInfo">
+      <app-profile-form [userInfo]="userInfo"></app-profile-form>
+    </ng-container>
+  </div>
+</mat-card>

@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnIni
 import { AngularFireAuth } from "@angular/fire/compat/auth";
 import { MatDialog } from "@angular/material/dialog";
 import { SignInComponent } from "@common/sign-in/sign-in.component";
-import { Observable, Subject, takeUntil } from "rxjs";
+import { Subject, takeUntil } from "rxjs";
 import firebase from 'firebase/compat/app';
 
 @Component({

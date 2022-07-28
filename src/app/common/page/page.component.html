@@ -15,10 +15,10 @@
             <button mat-button [matMenuTriggerFor]="menu">Contribute</button>
             <button mat-button>Services</button>
             <ng-container *ngIf="user; else unauthenticated">
-              <button mat-button>
+              <a mat-button routerLink="profile">
                 {{ user.displayName || user.email }}
-              </button>
-              <button mat-button (click)="onSignOut()">Sig Out</button>
+              </a>
+              <button mat-button (click)="onSignOut()">Sign Out</button>
             </ng-container>
             <ng-template #unauthenticated>
               <button mat-button (click)="onSignIn()">Sign In</button>
