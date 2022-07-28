@@ -17,5 +17,7 @@ export class EstimateFormComponent implements OnInit {
     this.router.navigate(['/match']);
   }
 
-  onSubmit(): void { }
+  onContinue(): void {
+    this.router.navigate(['/loan']);
+  }
 }

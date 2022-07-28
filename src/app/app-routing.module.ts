@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'buy', loadChildren: () => import('./pages/buy-page/buy-page.module').then(m => m.BuyPageModule) },
   { path: 'match', loadChildren: () => import('./pages/match-page/match-page.module').then(m => m.MatchPageModule) },
   { path: 'estimate', loadChildren: () => import('./pages/estimate-page/estimate-page.module').then(m => m.EstimatePageModule) },
+  { path: 'loan', loadChildren: () => import('./pages/loan-page/loan-page.module').then(m => m.LoanPageModule) },
 ];
 
 @NgModule({

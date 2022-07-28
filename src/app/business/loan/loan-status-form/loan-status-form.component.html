@@ -1,0 +1,78 @@
+<div fxLayout="column">
+  <h4>Seller</h4>
+
+  <div fxLayoutAlign="space-between center" fxLayoutGap="1em">
+    <button fxFlex mat-stroked-button>Seller's Agreement</button>
+    <div fxLayoutAlign="end center" fxLayoutGap="1em">
+      <button mat-raised-button color="accent">Review</button>
+      <button mat-raised-button color="primary">Submit</button>
+      <button mat-stroked-button color="accent">Add Comment</button>
+    </div>
+  </div>
+
+  <div fxLayoutAlign="start center" fxLayoutGap="1em">
+    <p class="label">Approval Status</p>
+    <p><b>Approved</b></p>
+  </div>
+
+  <h4>Installer</h4>
+
+  <div fxLayoutAlign="space-between center" fxLayoutGap="1em">
+    <button fxFlex mat-stroked-button>Project Cost Proposal</button>
+    <div fxLayoutAlign="end center" fxLayoutGap="1em">
+      <button mat-raised-button color="accent">Review</button>
+      <button mat-raised-button color="primary">Submit</button>
+      <button mat-stroked-button color="accent">Add Comment</button>
+    </div>
+  </div>
+
+  <div fxLayoutAlign="start center" fxLayoutGap="1em">
+    <p class="label">Approval Status</p>
+    <p><b>In Progress</b></p>
+  </div>
+
+  <h4>Buyer</h4>
+
+  <div fxLayoutAlign="space-between center" fxLayoutGap="1em">
+    <button fxFlex mat-stroked-button>Collateral Documents</button>
+    <div fxLayoutAlign="end center" fxLayoutGap="1em">
+      <button mat-raised-button color="accent">Review</button>
+      <button mat-raised-button color="primary">Submit</button>
+      <button mat-stroked-button color="accent">Add Comment</button>
+    </div>
+  </div>
+
+  <div fxLayoutAlign="start center" fxLayoutGap="1em">
+    <p class="label">Approval Status</p>
+    <p><b>Rejected</b></p>
+  </div>
+
+  <div fxLayoutAlign="space-between center" fxLayoutGap="1em">
+    <button fxFlex mat-stroked-button>Buyer's personal details</button>
+    <div fxLayoutAlign="end center" fxLayoutGap="1em">
+      <button mat-raised-button color="accent">Review</button>
+      <button mat-raised-button color="primary">Submit</button>
+      <button mat-stroked-button color="accent">Add Comment</button>
+    </div>
+  </div>
+
+  <div fxLayoutAlign="start center" fxLayoutGap="1em">
+    <p class="label">Approval Status</p>
+    <p><b>In Progress</b></p>
+  </div>
+
+  <h4>More</h4>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Add Comments</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+
+  <br />
+  <div fxLayoutAlign="space-between center">
+    <button mat-stroked-button type="button" (click)="onCancel()">
+      Cancel
+    </button>
+    <button mat-raised-button color="primary" type="button">Done</button>
+  </div>
+</div>

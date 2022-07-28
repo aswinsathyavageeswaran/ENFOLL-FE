@@ -57,7 +57,14 @@
     </button>
     <div fxLayoutGap="1em">
       <button mat-raised-button color="accent" type="button">Save Draft</button>
-      <button mat-raised-button color="primary" type="button">Continue</button>
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="onContinue()"
+      >
+        Continue
+      </button>
     </div>
   </div>
 </form>
