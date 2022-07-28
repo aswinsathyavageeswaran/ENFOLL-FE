@@ -1,0 +1,60 @@
+.ra-meter-component-wrapper,
+.ra-meter-title,
+.ra-meter-score-value,
+.ra-meter-score-text,
+.ra-meter-inherent-value,
+.ra-meter-score-severity,
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.loading {
+  padding-top: 5rem;
+}
+
+.ra-meter-component-wrapper {
+  position: relative;
+  margin: 3rem auto 2rem;
+  min-width: 310px;
+}
+
+.ra-meter-score-container {
+  position: absolute;
+  font-weight: 100;
+  line-height: 1;
+  top: auto;
+  bottom: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  font-size: 35.7px;
+  span {
+    font-size: 50px;
+    font-weight: 400;
+  }
+}
+
+.ra-meter-score-text {
+  margin-bottom: 20%;
+  span {
+    font-size: 14px;
+  }
+}
+
+.ra-meter-inherent-value {
+  margin-bottom: -20%;
+  span {
+    font-size: 15px;
+    color: #fff;
+  }
+}
+
+.ra-meter-score-severity {
+  span {
+    font-size: 15px;
+  }
+}

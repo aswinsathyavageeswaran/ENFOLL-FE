@@ -1,0 +1,45 @@
+
+.chart {
+   .content {
+    margin-top: 30px;
+    display: flex;
+   }
+
+   .heading {
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: uppercase;
+   }
+}
+
+.legend-container {
+    margin-top: 23px;
+    font-size: 11px;
+    .legend {
+        display: flex;
+        margin-top: 23px;
+        .icon {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-top: 2px;
+            margin-right: 6px;
+        }
+    }
+
+    .legend-1 {
+        background: #0b72ad;
+    }
+
+    .legend-2 {
+        background: #df7bbc;
+    }
+
+    .legend-3 {
+        background: #ef8e29;
+    }
+
+    .legend-4 {
+        background: #a6cce2;
+    }
+}

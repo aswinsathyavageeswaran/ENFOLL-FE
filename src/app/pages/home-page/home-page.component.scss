@@ -1,0 +1,101 @@
+.container {
+    margin-top: 10px;
+    .header-flex-container {
+        display: flex;
+        margin-left: 120px;
+        .heading-1 {
+            padding: 10px;
+            width: 450px;
+
+            .main-heading {
+                font-size: 29px;
+                font-weight: 600;
+            }
+
+            .sub-heading {
+                margin-top: 11px;
+            }
+        }
+
+        .heading-2 {
+            padding: 13px;
+            box-shadow: 1px 1px 9px #cabcbc;
+            margin-left: auto;
+            border-radius: 7px;
+            height: 101px;
+            line-height: 43px;
+            .heading-2-main-heading {
+                font-size: 18px;
+                color: #7c7373;
+            }
+            .heading-2-sub-heading {
+                font-size: 28px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.graph-flex-container {
+    display: flex;
+    padding-top: 22px;
+
+    .meter-graph {
+        margin: 0 auto;
+        width: 374px;
+        padding: 19px;
+        box-shadow: 1px 1px 9px #cec3c3;
+        border-radius: 5px;
+
+        .sub-text {
+            font-size: 12px;
+            margin-top: 16px;
+            color: #746f6f;
+        }
+
+        .heading {
+            font-weight: 500;
+            font-size: 17px;
+            text-transform: uppercase;
+        }
+
+        .value-div {
+            display: flex;
+            margin-top: -25px;
+            color: #888282;
+            font-size: 13px;
+            padding-bottom: 10px;
+
+            .start {
+                margin-left: 37px;
+            }
+
+            .end {
+                margin-left: auto;
+                margin-right: 22px;
+            }
+        }
+
+        .label-div {
+            display: flex;
+            font-size: 13px;
+
+            .right {
+                margin-left: -2px;
+            }
+
+            .left {
+                margin-left: auto;
+                margin-right: 4px;
+            }
+        }
+    }
+
+    .donut-graph {
+        margin-left: auto;
+        width: 374px;
+        padding: 19px;
+        box-shadow: 1px 1px 9px #cec3c3;
+        border-radius: 5px;
+    }
+}

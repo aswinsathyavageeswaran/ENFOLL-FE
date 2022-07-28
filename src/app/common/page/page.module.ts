@@ -8,6 +8,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from "@angular/router";
 import { SignInModule } from "@common/sign-in/sign-in.module";
 import { MatDialogModule } from '@angular/material/dialog';
+import { RoundProgressModule } from "angular-svg-round-progressbar";
 
 @NgModule({
   declarations: [

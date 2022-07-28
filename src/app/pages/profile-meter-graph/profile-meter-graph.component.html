@@ -1,0 +1,22 @@
+<div class="ra-meter-component-wrapper">
+    <round-progress class="ra-meter-component"
+                    id="riskProfileRoundProgress"
+                    [current]="residualAverage"
+                    [max]="100"
+                    color="#ff892e"
+                    background="#EAEAEA"
+                    [radius]="155"
+                    [stroke]="25"
+                    [semicircle]="true"
+                    [rounded]="false"
+                    [clockwise]="true"
+                    [responsive]="false"
+                    [duration]="2000"
+                    animation="easeInOutBounce"
+                    [animationDelay]="0"></round-progress>
+    <div class="ra-meter-score-container">
+      <div class="ra-meter-score-value" style.color="#000">
+        <span>{{residualAverage}} %</span>
+      </div>
+    </div>
+  </div>
