@@ -7,6 +7,7 @@ import { PageModule } from '@common/page/page.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     BrowserAnimationsModule,
     PageModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule.enablePersistence({ synchronizeTabs: true })
+    AngularFirestoreModule.enablePersistence({ synchronizeTabs: true }),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

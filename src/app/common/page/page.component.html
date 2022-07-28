@@ -14,7 +14,15 @@
             <a mat-button routerLink="home">Home</a>
             <button mat-button [matMenuTriggerFor]="menu">Contribute</button>
             <button mat-button>Services</button>
-            <button mat-button>Sign In</button>
+            <ng-container *ngIf="user; else unauthenticated">
+              <button mat-button>
+                {{ user.displayName || user.email }}
+              </button>
+              <button mat-button (click)="onSignOut()">Sig Out</button>
+            </ng-container>
+            <ng-template #unauthenticated>
+              <button mat-button (click)="onSignIn()">Sign In</button>
+            </ng-template>
           </div>
         </div>
       </div>
