@@ -1,0 +1,43 @@
+<div fxLayout="column" fxLayoutGap="1em">
+  <h3 class="mat-title">Crowd funding - Be a part of the Journey</h3>
+  <small class="mat-subheading">
+    Each return for your investment at a fixed rate, while the community
+    benefits.
+  </small>
+  <div class="ra-meter-component-wrapper">
+    <round-progress
+      class="ra-meter-component"
+      id="riskProfileRoundProgress"
+      [current]="residualAverage"
+      [max]="100"
+      color="#ff892e"
+      background="#EAEAEA"
+      [radius]="155"
+      [stroke]="25"
+      [semicircle]="true"
+      [rounded]="false"
+      [clockwise]="true"
+      [responsive]="false"
+      [duration]="2000"
+      animation="easeInOutBounce"
+      [animationDelay]="0"
+    ></round-progress>
+    <div class="ra-meter-score-container">
+      <div class="ra-meter-score-value" [style.color]="'#000'">
+        <span>{{ residualAverage }} %</span>
+      </div>
+    </div>
+  </div>
+  <div fxLayoutAlign="center center">
+    <div fxLayoutAlign="space-between center" class="labels">
+      <div fxLayout="column" fxLayoutAlign="center start">
+        <div class="mat-body-1">0 %</div>
+        <div class="mat-caption">Received</div>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center end">
+        <div class="mat-body-1">100 %</div>
+        <div class="mat-caption">Target</div>
+      </div>
+    </div>
+  </div>
+</div>

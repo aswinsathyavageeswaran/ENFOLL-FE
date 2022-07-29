@@ -1,55 +1,32 @@
-<div class="container">
-    <div class="header-flex-container">
-        <div class="heading-1">
-            <div class="main-heading">
-                Affordable, sustainable
-                <br />
-                energy solutions for all.
-            </div>
-            <div class="sub-heading">
-                We support transition to a low-carbon economy by reusing discarded and decommissioned solar panels.
-            </div>
-        </div>
-        <div class="heading-2">
-            <div class="heading-2-main-heading">
-                CO2 Emission Reduced
-            </div>
-            <div class="heading-2-sub-heading">
-                25.5 tons/year
-            </div>
-        </div>
+<div fxLayout="column" fxLayoutGap="4em">
+  <div fxLayoutAlign="space-between stretch" fxLayoutGap="4em">
+    <div fxFlex>
+      <h1 class="mat-display-2">
+        Affordable, sustainable <br />
+        energy solutions for all.
+      </h1>
+      <p class="mat-subheading">
+        We support transition to a low-carbon economy by reusing discarded and
+        decommissioned solar panels.
+      </p>
+      <div fxLayoutAlign="start center" fxLayoutGap="1em">
+        <a routerLink="/buy" mat-raised-button color="accent">Buy Panels</a>
+        <a routerLink="/sell" mat-raised-button color="primary"
+          >Sell / Donate Panels</a
+        >
+      </div>
     </div>
-    <div class="graph-flex-container">
-        <div class="meter-graph">
-            <div class="heading">
-                Crowd funding - Be a part of the Journey
-            </div>
-
-            <div class="sub-text">
-                Each return for your investment at a fixed rate,
-                <br />
-                while the community benefits.
-            </div>
-            <risk-profile-meter></risk-profile-meter>
-            <div class="value-div">
-                <div class="start">
-                    0 %
-                </div>
-                <div class="end">
-                    100 %
-                </div>
-            </div>
-            <div class="label-div">
-                <div class="right">
-                    Received
-                </div>
-                <div class="left">
-                    Target
-                </div>
-            </div>
-        </div>
-        <div class="donut-graph">
-            <donut-chart></donut-chart>
-        </div>
-    </div>
+    <mat-card fxLayout="column" fxLayoutAlign="center" class="mat-elevation-z8">
+      <h3 class="mat-headline">CO2 Emission Reduced</h3>
+      <p class="mat-display-3">25.5 tons/year</p>
+    </mat-card>
+  </div>
+  <div fxLayoutAlign="space-between stretch" fxLayoutGap="4em">
+    <mat-card fxFlex class="mat-elevation-z8">
+      <app-profile-meter-chart></app-profile-meter-chart>
+    </mat-card>
+    <mat-card fxFlex class="mat-elevation-z8">
+      <app-donut-chart></app-donut-chart>
+    </mat-card>
+  </div>
 </div>
