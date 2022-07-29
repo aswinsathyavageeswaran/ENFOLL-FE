@@ -1,36 +1,27 @@
 <form fxLyout="column">
   <mat-form-field appearance="outline">
     <mat-label>Project Name</mat-label>
-    <input matInput required />
+    <input matInput required value="Sapeso Drodo Community" />
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Energy Requirement</mat-label>
-    <input matInput required />
-    <span matSuffix>KW</span>
+    <input matInput required value="500" />
+    <span matSuffix>kWh</span>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Non-shaded area available</mat-label>
-    <input matInput required />
+    <input matInput required value="72000" />
     <span matSuffix>Sq Ft.</span>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
-    <mat-label>Status</mat-label>
-    <input matInput disabled value="New" />
+    <mat-label>Address</mat-label>
+    <textarea cdkTextareaAutosize matInput required>
+2278 Daffodil Dr&#13;&#10;Angola&#13;&#10;South Africa</textarea
+    >
   </mat-form-field>
-
-  <mat-form-field appearance="outline">
-    <mat-label>Project Cost</mat-label>
-    <input matInput disabled />
-  </mat-form-field>
-
-  <div fxLayoutAlign="end center">
-    <button mat-flat-button color="accent" disabled>
-      View project cost breakdown
-    </button>
-  </div>
 
   <br />
 
@@ -39,11 +30,11 @@
   <br />
   <div fxLayout="column" fxLayoutGap="1em">
     <div fxLayoutAlign="space-between center">
-      <mat-checkbox>Collateral Document</mat-checkbox>
+      <mat-checkbox checked>Collateral Document</mat-checkbox>
       <button type="button" mat-flat-button color="accent">Browse</button>
     </div>
     <div fxLayoutAlign="space-between center">
-      <mat-checkbox>ID Proof</mat-checkbox>
+      <mat-checkbox checked>ID Proof</mat-checkbox>
       <button type="button" mat-flat-button color="accent">Browse</button>
     </div>
   </div>

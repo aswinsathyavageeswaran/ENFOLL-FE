@@ -21,24 +21,26 @@
               <button mat-button (click)="onSignOut()">Sign Out</button>
             </ng-container>
             <ng-template #unauthenticated>
-              <button mat-button (click)="onSignIn()">Sign In</button>
+              <button mat-button>{{ username }}</button>
             </ng-template>
           </div>
         </div>
       </div>
     </mat-toolbar>
   </div>
-  <div fxFlex fxLayout="row" fxLayoutAlgin="start center">
+  <div fxFlex fxLayout="row" fxLayoutAlign="start center">
     <div fxLayout="row" fxFlex="100" fxLayoutAlign="center">
       <div class="page">
         <ng-content></ng-content>
       </div>
     </div>
   </div>
+  <div fxLayoutAlign="center center" class="footer">
+    <div class="page">&#169; 2022 enfoll</div>
+  </div>
 </div>
 
 <mat-menu #menu="matMenu">
-  <a mat-menu-item routerLink="donate">Donate</a>
   <a mat-menu-item routerLink="sell">Donate / Sell Solar Panels</a>
   <a mat-menu-item routerLink="buy">Buy Solar Panels</a>
 </mat-menu>

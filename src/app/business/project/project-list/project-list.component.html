@@ -14,13 +14,13 @@
   <!-- energy Column -->
   <ng-container matColumnDef="energy">
     <th mat-header-cell *matHeaderCellDef>Energy</th>
-    <td mat-cell *matCellDef="let element">{{ element.energy }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.energy }} kWh</td>
   </ng-container>
 
   <!-- cost Column -->
   <ng-container matColumnDef="cost">
     <th mat-header-cell *matHeaderCellDef>Project Cost</th>
-    <td mat-cell *matCellDef="let element">{{ element.cost }}</td>
+    <td mat-cell *matCellDef="let element">$ {{ element.cost }}</td>
   </ng-container>
 
   <!-- status Column -->

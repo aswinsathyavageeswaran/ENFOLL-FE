@@ -1,31 +1,41 @@
-<form fxLyout="column">
+<form fxLyout="column" [formGroup]="form">
   <mat-form-field appearance="outline">
     <mat-label># Panels</mat-label>
-    <input matInput required />
+    <input matInput required formControlName="quantity" />
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Type of Panels</mat-label>
-    <mat-select required>
-      <mat-option>Polycrystalline </mat-option>
-      <mat-option>Monocrystalline </mat-option>
-      <mat-option>Thin-film </mat-option>
+    <mat-select required formControlName="panelType">
+      <mat-option value="1">Polycrystalline </mat-option>
+      <mat-option value="2">Monocrystalline </mat-option>
+      <mat-option value="3">Thin-film </mat-option>
     </mat-select>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Efficiency as certified by Agency</mat-label>
-    <input matInput required />
+    <input matInput required formControlName="energy" />
+    <span matSuffix>kWh</span>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Assessing Agency</mat-label>
-    <textarea matInput required></textarea>
+    <textarea
+      cdkTextareaAutosize
+      matInput
+      required
+      formControlName="agency"
+    ></textarea>
   </mat-form-field>
 
   <div fxLayout="row" fxLayoutGap="1em">
     <label for="">Donate</label>
-    <mat-radio-group fxLayout="row" fxLayoutGap="1em">
+    <mat-radio-group
+      fxLayout="row"
+      fxLayoutGap="1em"
+      formControlName="isDonation"
+    >
       <mat-radio-button value="1">Yes</mat-radio-button>
       <mat-radio-button value="2">No</mat-radio-button>
     </mat-radio-group>
@@ -33,14 +43,22 @@
 
   <br />
 
-  <mat-form-field appearance="outline">
-    <mat-label>Price per Panel</mat-label>
-    <input matInput required />
-  </mat-form-field>
+  <ng-container *ngIf="form.get('pricePerPanel')?.enabled">
+    <mat-form-field appearance="outline">
+      <mat-label>Price per Panel</mat-label>
+      <input matInput required formControlName="pricePerPanel" />
+      <span matSuffix>$</span>
+    </mat-form-field>
+  </ng-container>
 
   <mat-form-field appearance="outline">
     <mat-label>Address</mat-label>
-    <textarea matInput required></textarea>
+    <textarea
+      cdkTextareaAutosize
+      matInput
+      required
+      formControlName="address"
+    ></textarea>
   </mat-form-field>
 
   <br />

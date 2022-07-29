@@ -9,8 +9,8 @@ export interface IDeal {
 }
 
 const ELEMENT_DATA: IDeal[] = [
-  { quantity: 1, type: "Buy", date: "12/12/2019", rate: "$100", status: "Pending" },
-  { quantity: 2, type: "Sell", date: "12/12/2020", rate: "$200", status: "Pending" },
+  { quantity: 1, type: "Donate", date: "12/12/2019", rate: "0", status: "Pending" },
+  { quantity: 2, type: "Sell", date: "12/12/2020", rate: "200", status: "Pending" },
 ];
 
 

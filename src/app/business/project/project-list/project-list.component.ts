@@ -4,13 +4,13 @@ export interface IProject {
   name: string;
   date: string;
   energy: string;
-  cost: number;
+  cost: number | string;
   status: string
 }
 
 const ELEMENT_DATA: IProject[] = [
-  { name: 'Project 1', date: '01/01/2020', energy: '80', cost: 100.00, status: 'Active' },
-  { name: 'Project 2', date: '01/01/2020', energy: '80', cost: 100.00, status: 'InActive' },
+  { name: 'Rustenburg Community', date: '01/01/2020', energy: '800', cost: '1.8M', status: 'Active' },
+  { name: 'Vryheid Power', date: '01/01/2020', energy: '250', cost: '90k', status: 'Completed' },
 ];
 
 

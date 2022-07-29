@@ -1,27 +1,42 @@
-<div fxLayout="column" fxLayoutGap="4em">
-  <div fxLayoutAlign="space-between stretch" fxLayoutGap="4em">
-    <div fxFlex>
+<div fxLayoutAlign="space-between start" fxLayoutGap="4em">
+  <div fxFlex="60" fxLayout="column" fxLayoutGap="4em">
+    <div>
       <h1 class="mat-display-2">
-        Affordable, sustainable <br />
-        energy solutions for all.
+        Affordable, Sustainable, Clean <br />
+        Energy Solutions for ALL.
       </h1>
       <p class="mat-subheading">
-        We support transition to a low-carbon economy by reusing discarded and
-        decommissioned solar panels.
+        We support transition to a low-carbon economy by ??.
       </p>
-      <div fxLayoutAlign="start center" fxLayoutGap="1em">
-        <a routerLink="/buy" mat-raised-button color="accent">Buy Panels</a>
-        <a routerLink="/sell" mat-raised-button color="primary"
-          >Sell / Donate Panels</a
-        >
+      <div fxLayoutAlign="start center" fxLayoutGap="4em">
+        <div fxLayout="column">
+          <div class="mat-title">Are you a NGO?</div>
+          <a routerLink="/buy" mat-raised-button color="accent">
+            Start Your Solar Project
+          </a>
+        </div>
+        <div fxLayout="column">
+          <div class="mat-title">Are you a Seller?</div>
+          <a routerLink="/sell" mat-raised-button color="primary">
+            Sell / Donate Panels
+          </a>
+        </div>
       </div>
     </div>
+    <mat-card class="mat-elevation-z8">
+      <h3 class="mat-title">
+        Population without access to electricity, millions of people (Urban)
+      </h3>
+      <div class="image">
+        <img src="/assets/map.png" alt="map" />
+      </div>
+    </mat-card>
+  </div>
+  <div fxFlex="40" fxLayout="column" fxLayoutGap="4em">
     <mat-card fxLayout="column" fxLayoutAlign="center" class="mat-elevation-z8">
       <h3 class="mat-headline">CO2 Emission Reduced</h3>
       <p class="mat-display-3">25.5 tons/year</p>
     </mat-card>
-  </div>
-  <div fxLayoutAlign="space-between stretch" fxLayoutGap="4em">
     <mat-card fxFlex class="mat-elevation-z8">
       <app-profile-meter-chart></app-profile-meter-chart>
     </mat-card>
