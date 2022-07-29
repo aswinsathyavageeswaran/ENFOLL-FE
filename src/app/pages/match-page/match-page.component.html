@@ -1,19 +1,20 @@
 <app-step-progress [step]="2"></app-step-progress>
 <br />
-<h2>Buyer Seller Matching</h2>
+<h2 class="mat-headline">Buyer Seller Matching</h2>
 <app-project-card></app-project-card>
 <br />
 <br />
-<h3>Best Match</h3>
-<app-match-result></app-match-result>
+<h2 class="mat-headline">Your Personalised Matches</h2>
+<div fxLayout="column" fxLayoutGap="1em">
+  <ng-container *ngFor="let group of groups">
+    <mat-card class="mat-elevation-z8">
+      <app-match-result [matches]="group.value"></app-match-result>
+    </mat-card>
+  </ng-container>
+</div>
 <br />
 <br />
 <div fxLayoutAlign="space-between center">
   <button mat-stroked-button (click)="onCancel()">cancel</button>
-  <div fxLayoutGap="1em">
-    <button mat-raised-button color="accent">Find the Next Best Option</button>
-    <button mat-raised-button color="primary" (click)="onChoose()">
-      Choose this Option
-    </button>
-  </div>
+  <button mat-raised-button color="accent">Find the Next Best Option</button>
 </div>

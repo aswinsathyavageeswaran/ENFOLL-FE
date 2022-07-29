@@ -1,46 +1,65 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  <!-- name Column -->
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef></th>
-    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+<div fxLayout="column" fxLayoutGap="1em">
+  <ng-container *ngIf="dataSource">
+    <table mat-table [dataSource]="dataSource">
+      <!-- name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <!-- quantity Column -->
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef># Panels</th>
+        <td mat-cell *matCellDef="let element">{{ element.noOfPanels }}</td>
+      </ng-container>
+
+      <!-- energy Column -->
+      <ng-container matColumnDef="energy">
+        <th mat-header-cell *matHeaderCellDef>Energy</th>
+        <td mat-cell *matCellDef="let element">{{ element.energy }} kWh</td>
+      </ng-container>
+
+      <!-- perPanelCost Column -->
+      <ng-container matColumnDef="perPanelCost">
+        <th mat-header-cell *matHeaderCellDef># Panel Cost</th>
+        <td mat-cell *matCellDef="let element">$ {{ element.panelCost }}</td>
+      </ng-container>
+
+      <!-- totalPanelCost Column -->
+      <ng-container matColumnDef="totalPanelCost">
+        <th mat-header-cell *matHeaderCellDef>Total Panel Cost</th>
+        <td mat-cell *matCellDef="let element">
+          $ {{ +element.panelCost * +element.noOfPanels }}
+        </td>
+      </ng-container>
+
+      <!-- transportCost Column -->
+      <ng-container matColumnDef="transportCost">
+        <th mat-header-cell *matHeaderCellDef>Transport Cost</th>
+        <td mat-cell *matCellDef="let element">
+          $ {{ element.transportCost }}
+        </td>
+      </ng-container>
+
+      <!-- amount Column -->
+      <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef>Amount</th>
+        <td mat-cell *matCellDef="let element">
+          $
+          {{
+            +element.transportCost + +element.panelCost * +element.noOfPanels
+          }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
   </ng-container>
 
-  <!-- quantity Column -->
-  <ng-container matColumnDef="quantity">
-    <th mat-header-cell *matHeaderCellDef># Panels</th>
-    <td mat-cell *matCellDef="let element">{{ element.quantity }}</td>
-  </ng-container>
-
-  <!-- energy Column -->
-  <ng-container matColumnDef="energy">
-    <th mat-header-cell *matHeaderCellDef>Energy (KwH)</th>
-    <td mat-cell *matCellDef="let element">{{ element.energy }}</td>
-  </ng-container>
-
-  <!-- perPanelCost Column -->
-  <ng-container matColumnDef="perPanelCost">
-    <th mat-header-cell *matHeaderCellDef># Panel Cost</th>
-    <td mat-cell *matCellDef="let element">${{ element.perPanelCost }}</td>
-  </ng-container>
-
-  <!-- totalPanelCost Column -->
-  <ng-container matColumnDef="totalPanelCost">
-    <th mat-header-cell *matHeaderCellDef>Total Panel Cost</th>
-    <td mat-cell *matCellDef="let element">${{ element.totalPanelCost }}</td>
-  </ng-container>
-
-  <!-- transportCost Column -->
-  <ng-container matColumnDef="transportCost">
-    <th mat-header-cell *matHeaderCellDef>Transport Cost</th>
-    <td mat-cell *matCellDef="let element">${{ element.transportCost }}</td>
-  </ng-container>
-
-  <!-- amount Column -->
-  <ng-container matColumnDef="amount">
-    <th mat-header-cell *matHeaderCellDef>Amount</th>
-    <td mat-cell *matCellDef="let element">${{ element.amount }}</td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-</table>
+  <div fxLayoutAlign="end center">
+    <button mat-raised-button color="primary" (click)="onChoose()">
+      Choose this Option
+    </button>
+  </div>
+</div>

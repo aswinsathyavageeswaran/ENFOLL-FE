@@ -7,6 +7,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProjectCardModule } from '@business/project/project-card/project-card.module';
 import { MatchResultModule } from '@business/match/match-result/match-result.module';
 import { StepProgressModule } from '@shared/step-progress/step-progress.module';
+import { MatchService } from '@api/services/match.service';
+import { MatCardModule } from '@angular/material/card';
 
 const routes: Routes = [
   { path: '', component: MatchPageComponent }
@@ -23,10 +25,14 @@ const routes: Routes = [
     MatButtonModule,
     ProjectCardModule,
     MatchResultModule,
-    StepProgressModule
+    StepProgressModule,
+    MatCardModule
   ],
   exports: [
     RouterModule
+  ],
+  providers: [
+    MatchService
   ]
 })
 export class MatchPageModule { }

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatchResultComponent } from './match-result.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -11,10 +13,12 @@ import { MatTableModule } from '@angular/material/table';
   ],
   imports: [
     CommonModule,
-    MatTableModule
+    FlexLayoutModule,
+    MatTableModule,
+    MatButtonModule
   ],
   exports: [
-    MatchResultComponent
+    MatchResultComponent,
   ]
 })
 export class MatchResultModule { }
