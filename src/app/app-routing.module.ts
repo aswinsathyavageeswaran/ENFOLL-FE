@@ -40,6 +40,11 @@ const routes: Routes = [
     data: { username: BUYER }
   },
   {
+    path: 'success',
+    loadChildren: () => import('./pages/success-page/success-page.module').then(m => m.SuccessPageModule),
+    data: { username: BUYER }
+  },
+  {
     path: 'profile',
     loadChildren: () => import('./pages/profile-page/profile-page.module').then(m => m.ProfilePageModule)
   },

@@ -9,6 +9,7 @@ import { RouterModule } from "@angular/router";
 import { SignInModule } from "@common/sign-in/sign-in.module";
 import { MatDialogModule } from '@angular/material/dialog';
 import { RoundProgressModule } from "angular-svg-round-progressbar";
+import { MatIconModule } from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RoundProgressModule } from "angular-svg-round-progressbar";
     MatMenuModule,
     RouterModule,
     SignInModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule
   ],
   exports: [
     PageComponent

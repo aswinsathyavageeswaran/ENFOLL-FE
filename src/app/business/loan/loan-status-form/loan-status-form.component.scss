@@ -1,4 +1,15 @@
 p.label {
   opacity: 0.7;
-  min-width: 150px;
+}
+.approved {
+  color: #00a000;
+}
+.rejected {
+  color: #a00000;
+}
+.pending {
+  color: #a0a0a0;
+}
+.in-progress {
+  color: #e89f2e;
 }

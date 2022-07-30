@@ -7,6 +7,7 @@ import { StepProgressModule } from '@shared/step-progress/step-progress.module';
 import { MatCardModule } from '@angular/material/card';
 import { LoanStatusFormModule } from '@business/loan/loan-status-form/loan-status-form.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatButtonModule } from '@angular/material/button';
 
 const routes: Routes = [
   { path: '', component: LoanPageComponent }
@@ -23,7 +24,8 @@ const routes: Routes = [
     StepProgressModule,
     ProjectCardModule,
     MatCardModule,
-    LoanStatusFormModule
+    LoanStatusFormModule,
+    MatButtonModule
   ],
   exports: [
     LoanPageComponent
