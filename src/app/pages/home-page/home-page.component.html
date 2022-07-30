@@ -1,14 +1,15 @@
-<div fxLayoutAlign="space-between start" fxLayoutGap="4em">
-  <div fxFlex="60" fxLayout="column" fxLayoutGap="4em">
-    <div>
+<div fxLayout="column" fxLayoutGap="2em">
+  <div fxLayoutAlign="space-between stretch" fxLayoutGap="2em">
+    <div fxFlex="60">
       <h1 class="mat-display-2">
         Affordable, Sustainable, Clean <br />
         Energy Solutions for ALL.
       </h1>
       <p class="mat-subheading">
-        We support transition to a low-carbon economy by ??.
+        We support transition to a low-carbon economy by extending the life of
+        used solar panels.
       </p>
-      <div fxLayoutAlign="start center" fxLayoutGap="4em">
+      <div fxLayoutAlign="start center" fxLayoutGap="2em">
         <div fxLayout="column">
           <div class="mat-title">Are you a NGO?</div>
           <a routerLink="/buy" mat-raised-button color="accent">
@@ -16,32 +17,45 @@
           </a>
         </div>
         <div fxLayout="column">
-          <div class="mat-title">Are you a Seller?</div>
+          <div class="mat-title">Join Our Journey</div>
           <a routerLink="/sell" mat-raised-button color="primary">
             Sell / Donate Panels
           </a>
         </div>
       </div>
     </div>
-    <mat-card class="mat-elevation-z8">
-      <h3 class="mat-title">
-        Population without access to electricity, millions of people (Urban)
-      </h3>
-      <div class="image">
-        <img src="/assets/map.png" alt="map" />
-      </div>
-    </mat-card>
-  </div>
-  <div fxFlex="40" fxLayout="column" fxLayoutGap="4em">
-    <mat-card fxLayout="column" fxLayoutAlign="center" class="mat-elevation-z8">
+    <mat-card
+      fxFlex="40"
+      fxLayout="column"
+      fxLayoutAlign="center"
+      class="mat-elevation-z8"
+    >
       <h3 class="mat-headline">CO2 Emission Reduced</h3>
       <p class="mat-display-3">25.5 tons/year</p>
     </mat-card>
-    <mat-card fxFlex class="mat-elevation-z8">
-      <app-profile-meter-chart></app-profile-meter-chart>
-    </mat-card>
-    <mat-card fxFlex class="mat-elevation-z8">
-      <app-donut-chart></app-donut-chart>
-    </mat-card>
+  </div>
+  <div fxLayoutAlign="space-between stretch" fxLayoutGap="2em">
+    <div fxFlex="60" fxLayout="column" fxLayoutGap="2em">
+      <mat-card class="mat-elevation-z8">
+        <h3 class="mat-title">
+          Population without access to electricity, millions of people (Total)
+        </h3>
+        <div class="image">
+          <img src="/assets/map.png" alt="map" />
+        </div>
+        <br />
+        <div class="image-2">
+          <img src="/assets/map-tags.png" alt="map" />
+        </div>
+      </mat-card>
+    </div>
+    <div fxFlex="40" fxLayout="column" fxLayoutGap="2em">
+      <mat-card fxFlex class="mat-elevation-z8">
+        <app-profile-meter-chart></app-profile-meter-chart>
+      </mat-card>
+      <mat-card fxFlex class="mat-elevation-z8">
+        <app-donut-chart></app-donut-chart>
+      </mat-card>
+    </div>
   </div>
 </div>
