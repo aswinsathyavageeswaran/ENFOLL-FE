@@ -16,6 +16,7 @@ export class PageComponent implements OnInit, OnDestroy {
   private unsubscribe$ = new Subject<void>();
   user?: firebase.User | null;
   username = 'Sign In';
+  hasUsername = false;
 
   constructor(
     private dialog: MatDialog,
@@ -31,7 +32,9 @@ export class PageComponent implements OnInit, OnDestroy {
     });
     this.router.events.pipe(takeUntil(this.unsubscribe$)).subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.username = this.route.root.firstChild?.snapshot.data['username'] || 'Sign In';
+        const username = this.route.root.firstChild?.snapshot.data['username'];
+        this.hasUsername = !!username;
+        this.username = username || this.username;
         this.ref.detectChanges();
       }
     });

@@ -22,7 +22,7 @@
             </ng-container>
             <ng-template #unauthenticated>
               <button mat-button>
-                <mat-icon class="avatar">person</mat-icon>
+                <mat-icon *ngIf="hasUsername" class="avatar">person</mat-icon>
                 <span>{{ username }}</span>
               </button>
             </ng-template>
@@ -39,7 +39,7 @@
     </div>
   </div>
   <div fxLayoutAlign="center center" class="footer">
-    <div class="page">&#169; 2022 enfoll</div>
+    <div class="page">&#169; 2022 Enfoll</div>
   </div>
 </div>
 
