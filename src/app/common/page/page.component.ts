@@ -34,7 +34,7 @@ export class PageComponent implements OnInit, OnDestroy {
       if (event instanceof NavigationEnd) {
         const username = this.route.root.firstChild?.snapshot.data['username'];
         this.hasUsername = !!username;
-        this.username = username || this.username;
+        this.username = username || 'Sign In';
         this.ref.detectChanges();
       }
     });
